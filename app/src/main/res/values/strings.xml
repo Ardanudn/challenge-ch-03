@@ -2,4 +2,13 @@
     <string name="app_name">Challenge_ch3</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="string_hai_ardanu">Hai, Ardanu</string>
+    <string name="string_mau_makan_apa">mau makan apa hari ini ?</string>
+    <string name="string_diskon_30">Diskon 30%</string>
+    <string name="string_pesan_makanan">pesan makanan lewat aplikasi dan dapatkan diskonmu</string>
+    <string name="text_ayam">Ayam</string>
+    <string name="text_mie">Mie</string>
+    <string name="text_snack">Snack</string>
+    <string name="text_minuman">Minuman</string>
+    <string name="text_list_menu_makanan">List Menu Makanan</string>
 </resources>
