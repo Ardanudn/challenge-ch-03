@@ -1,4 +1,4 @@
-package com.ardanu.challenge_ch3.adapters
+package com.ardanu.challenge_ch3
 
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -6,11 +6,8 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.ImageView
 import android.widget.TextView
-import androidx.core.os.bundleOf
 import androidx.navigation.findNavController
 import androidx.recyclerview.widget.RecyclerView
-import com.ardanu.challenge_ch3.R
-import com.ardanudn.challenge_ch2.MenuMakanan
 
 
 class MenuAdapter(private val menuList: List<MenuMakanan>, private val isGrid: Boolean) :
@@ -38,9 +35,10 @@ class MenuAdapter(private val menuList: List<MenuMakanan>, private val isGrid: B
             val item = menuList[position]
             gridVH.imgBurger.setImageResource(item.imageResId)
             gridVH.burger.text = item.nama
-            gridVH.hargaBurger.text = item.harga
+            gridVH.hargaBurger.text = "Rp. ${item.harga}"
             gridVH.itemView.setOnClickListener(View.OnClickListener {
-                val bundle = bundleOf("DATA_MENU" to item)
+                val bundle = Bundle()
+                bundle.putParcelable("DATA_MENU",item)
                 it.findNavController().navigate(R.id.action_homeFragment_to_detailMenuFragment,bundle)
             })
         }else{
@@ -48,7 +46,7 @@ class MenuAdapter(private val menuList: List<MenuMakanan>, private val isGrid: B
             val item = menuList[position]
             listVH.imgBurger.setImageResource(item.imageResId)
             listVH.burger.text = item.nama
-            listVH.hargaBurger.text = item.harga
+            listVH.hargaBurger.text = "Rp. ${item.harga}"
         }
 
     }

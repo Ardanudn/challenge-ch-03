@@ -11,4 +11,10 @@
     <string name="text_snack">Snack</string>
     <string name="text_minuman">Minuman</string>
     <string name="text_list_menu_makanan">List Menu Makanan</string>
+    <string name="nama_makanan">Nama Makanan</string>
+    <string name="harga">Rp.30000</string>
+    <string name="description">Ini deskripsi menu....</string>
+    <string name="lokasi">Lokasi</string>
+    <string name="deskripsi_lokasi">Deskripsi Lokasi</string>
+    <string name="tambah_keranjang">Tambah Keranjang</string>
 </resources>

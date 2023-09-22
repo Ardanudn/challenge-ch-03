@@ -16,5 +16,9 @@
         android:id="@+id/detailMenuFragment"
         android:name="com.ardanu.challenge_ch3.DetailMenuFragment"
         android:label="fragment_detail_menu"
-        tools:layout="@layout/fragment_detail_menu" />
+        tools:layout="@layout/fragment_detail_menu" >
+        <argument
+            android:name="menu"
+            app:argType="com.ardanu.challenge_ch3.MenuMakanan" />
+    </fragment>
 </navigation>

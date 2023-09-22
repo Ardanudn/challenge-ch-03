@@ -2,6 +2,8 @@
 plugins {
     alias(libs.plugins.androidApplication)
     alias(libs.plugins.kotlinAndroid)
+    id ("kotlin-parcelize")
+    id ("androidx.navigation.safeargs")
 }
 
 android {
@@ -33,6 +35,9 @@ android {
     }
     kotlinOptions {
         jvmTarget = "1.8"
+    }
+    buildFeatures {
+        viewBinding=true
     }
 }
 
