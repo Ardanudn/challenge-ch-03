@@ -7,6 +7,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
+import androidx.navigation.fragment.findNavController
 import com.ardanu.challenge_ch3.databinding.FragmentDetailMenuBinding
 
 class DetailMenuFragment : Fragment() {
@@ -34,10 +35,15 @@ class DetailMenuFragment : Fragment() {
         binding.txtHarga.text = "Rp. ${itemMenu.harga}"
         binding.txtDeskripsiMenu.text = itemMenu.deksripsi
         binding.txtDeskripsiLokasi.text = itemMenu.lokasi
+        binding.btnTambahKeranjang.text = "Tambah Keranjang - Rp. ${itemMenu.harga}"
 
         binding.txtDeskripsiLokasi.setOnClickListener(View.OnClickListener {
             val mapIntent = Intent(Intent.ACTION_VIEW, Uri.parse(itemMenu.urlLokasi))
             startActivity(mapIntent);
+        })
+
+        binding.ivBack.setOnClickListener(View.OnClickListener {
+            findNavController().popBackStack()
         })
 
     }
